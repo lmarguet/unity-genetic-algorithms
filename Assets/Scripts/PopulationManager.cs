@@ -45,8 +45,8 @@ public class PopulationManager : MonoBehaviour
             transform.position.x + Random.Range(-2, 2),
             transform.position.y,
             transform.position.z + Random.Range(-2, 2)
-            );
-
+        );
+        
         return Instantiate(botPrefab, startingPos, transform.rotation);
     }
 
@@ -79,6 +79,7 @@ public class PopulationManager : MonoBehaviour
         population.Clear();
 
         var startIndex = Mathf.RoundToInt(sortedList.Count / 2 - 1);
+        
         for (var i = startIndex; i < sortedList.Count - 1; i++){
             population.Add(Breed(sortedList[i], sortedList[i + 1]));
             population.Add(Breed(sortedList[i + 1], sortedList[i]));

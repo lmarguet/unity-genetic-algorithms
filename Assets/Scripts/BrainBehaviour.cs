@@ -26,6 +26,7 @@ public class BrainBehaviour : MonoBehaviour
             alive = false;
             TimeAlive = 0;
             TimeWalking = 0;
+            Destroy(ethanInstance);
         }
     }
 
